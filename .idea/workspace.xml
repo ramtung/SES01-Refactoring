@@ -13,6 +13,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="44244d01-2e61-4c75-b835-c84aecaef1a2" />
+        <option name="url" value="https://github.com/MohammadShahheydar/SES01-Refactoring.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -39,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673287474623</updated>
-      <workItem from="1673287477645" duration="657000" />
+      <workItem from="1673287477645" duration="968000" />
     </task>
     <servers />
   </component>
