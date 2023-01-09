@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29ec0840-0bfd-440d-97f9-0f8a95febf3e" name="Changes" comment="" />
+    <list default="true" id="29ec0840-0bfd-440d-97f9-0f8a95febf3e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/CSE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/CSE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/EnrollCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/EnrollCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Term.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Term.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/exceptions/EnrollmentRulesViolationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/exceptions/EnrollmentRulesViolationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/exceptions/UnknownOfferingsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/exceptions/UnknownOfferingsException.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +33,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2K6G9zmCunl3JO8n55MgI3kAgmv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -36,6 +52,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
@@ -47,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673287474623</updated>
-      <workItem from="1673287477645" duration="968000" />
+      <workItem from="1673287477645" duration="1342000" />
     </task>
     <servers />
   </component>
