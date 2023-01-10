@@ -51,10 +51,6 @@ public class Course {
         return units;
     }
 
-    public String getId() {
-        return id;
-    }
-
     public boolean equals(Object obj) {
         Course other = (Course) obj;
         return id.equals(other.id);
