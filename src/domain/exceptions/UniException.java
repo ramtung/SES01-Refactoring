@@ -6,8 +6,8 @@ import java.util.List;
 public class UniException extends Exception{
     private List<EnrollmentRulesViolationException> exceptionList;
 
-    public UniException() {
-        super("uni exception");
+    public UniException(String message) {
+        super(message);
         exceptionList = new ArrayList<>();
     }
 
