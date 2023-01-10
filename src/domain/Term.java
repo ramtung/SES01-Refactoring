@@ -16,16 +16,8 @@ public class Term {
         this.startDate = startDate;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public String toString() {
         return name;
-    }
-
-    public Date getStartDate() {
-        return startDate;
     }
 
     @Override
