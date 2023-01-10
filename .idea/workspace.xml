@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29ec0840-0bfd-440d-97f9-0f8a95febf3e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/CSE.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/Course.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/EnrollCtrl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/Student$CourseSection.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/Term.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/exceptions/EnrollmentRulesViolationException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/exceptions/StudentNotFoundException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/exceptions/UnknownOfferingsException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SES01-Refactoring.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/EnrollCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/EnrollCtrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/EnrollCtrlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/EnrollCtrlTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="29ec0840-0bfd-440d-97f9-0f8a95febf3e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +32,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2K6G9zmCunl3JO8n55MgI3kAgmv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -102,7 +88,7 @@
       <updated>1673287474623</updated>
       <workItem from="1673287477645" duration="1342000" />
       <workItem from="1673372086053" duration="2456000" />
-      <workItem from="1673374616589" duration="313000" />
+      <workItem from="1673374616589" duration="784000" />
     </task>
     <servers />
   </component>
@@ -119,5 +105,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add gitignore file and rename studen variable name for more readable" />
   </component>
 </project>
