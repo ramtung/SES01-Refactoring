@@ -40,4 +40,8 @@ public class Offering {
     public int getSection() {
         return section;
     }
+
+    public boolean isSameCourse(Offering offering) {
+        return getCourse().equals(offering.getCourse());
+    }
 }
