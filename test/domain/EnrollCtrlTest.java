@@ -4,9 +4,11 @@ import static org.junit.Assert.*;
 
 import java.util.*;
 
-import domain.exceptions.EnrollmentRulesViolationException;
+import domain.exceptions.UniException;
+import domain.exceptions.UniException;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.List;
 
 public class EnrollCtrlTest {
 	private Student bebe;
@@ -43,12 +45,12 @@ public class EnrollCtrlTest {
 		bebe = new Student("1", "Bebe");
 	}
 
-	private ArrayList<CSE> requestedOfferings(Course...courses) {
+	private ArrayList<Offering> requestedOfferings(Course...courses) {
 		Calendar cal = Calendar.getInstance();
-		ArrayList<CSE> result = new ArrayList<>();
+		ArrayList<Offering> result = new ArrayList<>();
 		for (Course course : courses) {
 			cal.add(Calendar.DATE, 1);
-			result.add(new CSE(course, cal.getTime()));
+			result.add(new Offering(course, cal.getTime()));
 		}
 		return result;
 	}
@@ -65,24 +67,24 @@ public class EnrollCtrlTest {
 	}
 
 	@Test
-	public void canTakeBasicCoursesInFirstTerm() throws EnrollmentRulesViolationException {
+	public void canTakeBasicCoursesInFirstTerm() throws UniException {
 		new EnrollCtrl().enroll(bebe, requestedOfferings(math1, phys1, prog));
 		assertTrue(hasTaken(bebe, math1, phys1, prog));
 	}
 
 	@Test
-	public void canTakeNoOfferings() throws EnrollmentRulesViolationException {
+	public void canTakeNoOfferings() throws UniException {
 		new EnrollCtrl().enroll(bebe, new ArrayList<>());
 		assertTrue(hasTaken(bebe));
 	}
 
-	@Test(expected = EnrollmentRulesViolationException.class)
-	public void cannotTakeWithoutPreTaken() throws EnrollmentRulesViolationException {
+	@Test(expected = UniException.class)
+	public void cannotTakeWithoutPreTaken() throws UniException {
 		new EnrollCtrl().enroll(bebe, requestedOfferings(math2, phys1, prog));
 	}
 
-	@Test(expected = EnrollmentRulesViolationException.class)
-	public void cannotTakeWithoutPrePassed() throws EnrollmentRulesViolationException {
+	@Test(expected = UniException.class)
+	public void cannotTakeWithoutPrePassed() throws UniException {
 		bebe.addTranscriptRecord(phys1, new Term("t1"), 18);
 		bebe.addTranscriptRecord(prog, new Term("t1"), 12);
 		bebe.addTranscriptRecord(math1, new Term("t1"), 8.4);
@@ -90,7 +92,7 @@ public class EnrollCtrlTest {
 	}
 
 	@Test
-	public void canTakeWithPreFinallyPassed() throws EnrollmentRulesViolationException {
+	public void canTakeWithPreFinallyPassed() throws UniException {
 		bebe.addTranscriptRecord(phys1, new Term("t1"), 18);
 		bebe.addTranscriptRecord(prog, new Term("t1"), 12);
 		bebe.addTranscriptRecord(math1, new Term("t1"), 8.4);
@@ -103,8 +105,9 @@ public class EnrollCtrlTest {
 		assertTrue(hasTaken(bebe, math2, dm));
 	}
 
-	@Test(expected = EnrollmentRulesViolationException.class)
-	public void cannotTakeAlreadyPassed1() throws EnrollmentRulesViolationException {
+
+	@Test(expected = UniException.class)
+	public void cannotTakeAlreadyPassed1() throws UniException {
 		bebe.addTranscriptRecord(phys1, new Term("t1"), 18);
 		bebe.addTranscriptRecord(prog, new Term("t1"), 12);
 		bebe.addTranscriptRecord(math1, new Term("t1"), 8.4);
@@ -116,8 +119,8 @@ public class EnrollCtrlTest {
 		new EnrollCtrl().enroll(bebe, requestedOfferings(math1, dm));
 	}
 
-	@Test(expected = EnrollmentRulesViolationException.class)
-	public void cannotTakeAlreadyPassed2() throws EnrollmentRulesViolationException {
+	@Test(expected = UniException.class)
+	public void cannotTakeAlreadyPassed2() throws UniException {
 		bebe.addTranscriptRecord(phys1, new Term("t1"), 18);
 		bebe.addTranscriptRecord(prog, new Term("t1"), 12);
 		bebe.addTranscriptRecord(math1, new Term("t1"), 8.4);
@@ -129,24 +132,24 @@ public class EnrollCtrlTest {
 		new EnrollCtrl().enroll(bebe, requestedOfferings(phys1, dm));
 	}
 
-	@Test(expected = EnrollmentRulesViolationException.class)
-	public void cannotTakeOfferingsWithSameExamTime() throws EnrollmentRulesViolationException {
+	@Test(expected = UniException.class)
+	public void cannotTakeOfferingsWithSameExamTime() throws UniException {
 		Calendar cal = Calendar.getInstance();
 		new EnrollCtrl().enroll(bebe,
 				List.of(
-					new CSE(phys1, cal.getTime()),
-					new CSE(math1, cal.getTime()),
-					new CSE(phys1, cal.getTime())
+					new Offering(phys1, cal.getTime()),
+					new Offering(math1, cal.getTime()),
+					new Offering(phys1, cal.getTime())
 				));
 	}
 
-	@Test(expected = EnrollmentRulesViolationException.class)
-	public void cannotTakeACourseTwice() throws EnrollmentRulesViolationException {
+	@Test(expected = UniException.class)
+	public void cannotTakeACourseTwice() throws UniException {
 		new EnrollCtrl().enroll(bebe, requestedOfferings(phys1, dm, phys1));
 	}
 
 	@Test
-	public void canTake14WithGPA11() throws EnrollmentRulesViolationException {
+	public void canTake14WithGPA11() throws UniException {
 		bebe.addTranscriptRecord(phys1, new Term("t1"), 13);
 		bebe.addTranscriptRecord(prog, new Term("t1"), 11);
 		bebe.addTranscriptRecord(math1, new Term("t1"), 9);
@@ -155,8 +158,8 @@ public class EnrollCtrlTest {
 		assertTrue(hasTaken(bebe, dm, math1, farsi, akhlagh, english, maaref));
 	}
 
-	@Test(expected = EnrollmentRulesViolationException.class)
-	public void cannotTake15WithGPA11() throws EnrollmentRulesViolationException {
+	@Test(expected = UniException.class)
+	public void cannotTake15WithGPA11() throws UniException {
 		bebe.addTranscriptRecord(phys1, new Term("t1"), 13);
 		bebe.addTranscriptRecord(prog, new Term("t1"), 11);
 		bebe.addTranscriptRecord(math1, new Term("t1"), 9);
@@ -166,7 +169,7 @@ public class EnrollCtrlTest {
 	}
 
 	@Test
-	public void canTake15WithGPA12() throws EnrollmentRulesViolationException {
+	public void canTake15WithGPA12() throws UniException {
 		bebe.addTranscriptRecord(phys1, new Term("t1"), 15);
 		bebe.addTranscriptRecord(prog, new Term("t1"), 12);
 		bebe.addTranscriptRecord(math1, new Term("t1"), 9);
@@ -176,7 +179,7 @@ public class EnrollCtrlTest {
 	}
 
 	@Test
-	public void canTake15WithGPA15() throws EnrollmentRulesViolationException {
+	public void canTake15WithGPA15() throws UniException {
 		bebe.addTranscriptRecord(phys1, new Term("t1"), 15);
 		bebe.addTranscriptRecord(prog, new Term("t1"), 15);
 		bebe.addTranscriptRecord(math1, new Term("t1"), 15);
@@ -185,8 +188,8 @@ public class EnrollCtrlTest {
 		assertTrue(hasTaken(bebe, dm, math2, farsi, akhlagh, english, maaref));
 	}
 
-	@Test(expected = EnrollmentRulesViolationException.class)
-	public void cannotTake18WithGPA15() throws EnrollmentRulesViolationException {
+	@Test(expected = UniException.class)
+	public void cannotTake18WithGPA15() throws UniException {
 		bebe.addTranscriptRecord(phys1, new Term("t1"), 15);
 		bebe.addTranscriptRecord(prog, new Term("t1"), 15);
 		bebe.addTranscriptRecord(math1, new Term("t1"), 15);
@@ -196,7 +199,7 @@ public class EnrollCtrlTest {
 	}
 
 	@Test
-	public void canTake20WithGPA16() throws EnrollmentRulesViolationException {
+	public void canTake20WithGPA16() throws UniException {
 		bebe.addTranscriptRecord(phys1, new Term("t1"), 16);
 		bebe.addTranscriptRecord(prog, new Term("t1"), 16);
 		bebe.addTranscriptRecord(math1, new Term("t1"), 16);
@@ -206,8 +209,8 @@ public class EnrollCtrlTest {
 		assertTrue(hasTaken(bebe, ap, dm, math2, phys2, economy, karafarini, farsi));
 	}
 
-	@Test(expected = EnrollmentRulesViolationException.class)
-	public void cannotTake24() throws EnrollmentRulesViolationException {
+	@Test(expected = UniException.class)
+	public void cannotTake24() throws UniException {
 		bebe.addTranscriptRecord(phys1, new Term("t1"), 16);
 		bebe.addTranscriptRecord(prog, new Term("t1"), 16);
 		bebe.addTranscriptRecord(math1, new Term("t1"), 16);
