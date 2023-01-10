@@ -44,4 +44,8 @@ public class Offering {
     public boolean isSameCourse(Offering offering) {
         return getCourse().equals(offering.getCourse());
     }
+
+    public boolean hasExamsTimeOverlap(Offering offering) {
+        return getExamTime().equals(offering.getExamTime());
+    }
 }
