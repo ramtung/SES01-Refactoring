@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29ec0840-0bfd-440d-97f9-0f8a95febf3e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/target/classes/domain/CSE.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/domain/Course.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/domain/EnrollCtrl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/domain/Student$CourseSection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/domain/Student.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/domain/Term.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/domain/exceptions/EnrollmentRulesViolationException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/domain/exceptions/StudentNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/domain/exceptions/UnknownOfferingsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/CSE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/CSE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SES01-Refactoring.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/EnrollCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/EnrollCtrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Term.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Term.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/exceptions/EnrollmentRulesViolationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/exceptions/EnrollmentRulesViolationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/exceptions/UnknownOfferingsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/exceptions/UnknownOfferingsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/EnrollCtrlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/EnrollCtrlTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,18 +53,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/intellij/software&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;shared-indexes&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="EnrollCtrlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SES01-Refactoring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="domain" />
+      <option name="MAIN_CLASS_NAME" value="domain.EnrollCtrlTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.EnrollCtrlTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,6 +101,8 @@
       <option name="presentableId" value="Default" />
       <updated>1673287474623</updated>
       <workItem from="1673287477645" duration="1342000" />
+      <workItem from="1673372086053" duration="2456000" />
+      <workItem from="1673374616589" duration="313000" />
     </task>
     <servers />
   </component>

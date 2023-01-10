@@ -7,6 +7,7 @@ import java.util.*;
 import domain.exceptions.EnrollmentRulesViolationException;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.List;
 
 public class EnrollCtrlTest {
 	private Student bebe;
